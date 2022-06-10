@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HL Sources - HTML Generator</title>
+  <link rel="stylesheet" type="text/css" href="../style.css?update=2">
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/png">
+</head>
+
+<body>
+
+
+  <div id="main-div">
+    <h1>HL Sources</h1>
+
+    <p><a href="../index.html" class="grey">« Return back to main page</a></p>
+
+
+
+    <div class="section-title">
+
+      <h2><a>HTML Generator</a></h2>
+    </div>
+    <div>
+        <table>
+          
+          <tr>
+            <td>Source Repo URL:</td>
+            <td colspan="3"><input type="text" id="sourceRepo"></td>
+          </tr>
+          <tr>
+            <td>Target Repo URL:</td>
+            <td><input type="text" id="targetRepo" placeholder="Leave blank for same name"></td>
+            <td>Target organization:</td>
+            <td><select name="orgName" id="orgName">
+              <option value="HLSources">HLSources</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td>Official Website:</td>
+            <td colspan="3"><input type="text" id="officialSite"></td>
+          </tr>
+          <tr>
+            <td>Official Discord URL:</td>
+            <td><input type="text" id="discordURL"></td>
+            <td>Official Discord Name:</td>
+            <td><input type="text" id="discordName"></td>
+          </tr>
+          <tr>
+            <td>Repo Description:</td>
+            <td colspan="3"><input type="text" id="descriptionText"></td>
+          </tr>
+          <tr>
+            <td>Resulting HTML Code:</td>
+            <td colspan="3">
+            <textarea id="resultText" rows="4"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="3">
+              <button type="button" onclick='genHTML()'>Generate</button>
+            </td>
+          </tr>
+
+        </table>
+       
+        
+        </form>
+      <br>
+      <p class="subtext">This is admin tool for generating HTML code for individual item in the list to manually paste it to the page.</p>
+      
+    </div>
+
+
+    <div class="section-title">
+      <div class="hr"></div>
+      <h2><a name="comments" class="grey">Comments:</a></h3>
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+            this.page.url = "http://HLSources.github.io/";
+            this.page.identifier = "index";
+          };
+
+          (function () {
+            var d = document,
+              s = d.createElement('script');
+            s.src = 'https://HLSources.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered
+            by Disqus.</a></noscript>
+    </div>
+   
+
+    <div class="footer"></div>
+
+    <script src="../script2.js"></script>
+
+</body>
+
+</html>
