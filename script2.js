@@ -194,3 +194,10 @@ function genHTML() {
 
     resultText.innerHTML = resultHTML
 }
+
+function copyHTML() {
+  var resultText = document.getElementById("resultText");
+  resultText.focus();
+  resultText.select();
+  navigator.clipboard.writeText(resultText.value);
+}
